@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Link from "next/link";
 import Image from "next/image";
 import {Col, Container, Nav, Navbar, Row} from "react-bootstrap";
+import {scrollIntoSkills} from "./skills/skills";
+import {scrollIntoFacts} from "./facts/facts";
 
 export default function MainLayout({children, title}: any) {
   return (
@@ -36,15 +38,8 @@ export default function MainLayout({children, title}: any) {
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
               <Nav className="mr-auto justify-content-center">
-                <Link href="/">
-                  <a className="nav-link text">About me</a>
-                </Link>
-                <Link href="/">
-                  <a className="nav-link text">Random Facts</a>
-                </Link>
-                <Link href="/">
-                  <a className="nav-link text">Skills</a>
-                </Link>
+                <a className="nav-link text" onClick={() => scrollIntoFacts()}>Random Facts</a>
+                <a className="nav-link text" onClick={() => scrollIntoSkills()}>Skills</a>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -63,15 +58,8 @@ export default function MainLayout({children, title}: any) {
               <Row className="footer__top__links">
                 <Col>
                   <div className="footer__links">
-                    <Link href="/">
-                      <a className="text footer__text">About me</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Random facts</a>
-                    </Link>
-                    <Link href="/">
-                      <a className="text footer__text">Skills</a>
-                    </Link>
+                    <a className="text footer__text" onClick={() => scrollIntoFacts()}>Random Facts</a>
+                    <a className="text footer__text" onClick={() => scrollIntoSkills()}>Skills</a>
                   </div>
                 </Col>
               </Row>

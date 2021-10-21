@@ -1,6 +1,12 @@
 import {Col, Container, Row} from "react-bootstrap";
-import {useState} from "react";
+import {createRef, useState} from "react";
 import React, {useRef} from 'react'
+
+const factsRef: any = createRef();
+
+export function scrollIntoFacts() {
+  factsRef.current.scrollIntoView({ behavior: 'smooth'})
+}
 
 export default function Facts() {
   const [status, setStatus] = useState<number>(1);
@@ -47,7 +53,7 @@ export default function Facts() {
   }
 
   return (
-    <section className="facts">
+    <section className="facts" ref={factsRef}>
       <Container>
         <Row>
           <Col>

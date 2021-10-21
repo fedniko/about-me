@@ -1,6 +1,12 @@
 import {Col, Container, Row} from "react-bootstrap";
 import Image from "next/image";
-import {useState} from "react";
+import React, { useState } from "react";
+
+const skillsRef: any = React.createRef();
+
+export function scrollIntoSkills() {
+  skillsRef.current.scrollIntoView({ behavior: 'smooth'})
+}
 
 export default function Skills() {
   const [posts] = useState<any>([
@@ -30,7 +36,7 @@ export default function Skills() {
     },
   ]);
   return (
-    <section className="skills">
+    <section className="skills" ref={skillsRef}>
       <Container>
         <Row>
           <Col>

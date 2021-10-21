@@ -18,14 +18,16 @@
       margin-bottom: 19px;
     }
     &__links {
-      color: #a3abb4;
       a {
+        color: #a3abb4;
+        font-weight: normal;
         margin-right: 51px;
         &:last-child {
           margin-right: 0;
         }
         &:hover {
           color: #0d6efd;
+          cursor: pointer;
         }
       }
     }
