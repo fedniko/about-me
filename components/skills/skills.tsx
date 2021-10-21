@@ -26,7 +26,7 @@ export default function Skills() {
       id: 4,
       image_url: '/img/design.svg',
       title: 'Design',
-      description: 'Figma',
+      description: 'Figma\nAdobe PhotoShop',
     },
   ]);
   return (

@@ -1,0 +1,56 @@
+.pendulum {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    label {
+      margin-right: 20px;
+    }
+    input[readonly] {
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 60px;
+      width: 100px;
+      font-size: 24px;
+      text-align: center;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: transparent;
+      padding: 12px;
+      border-radius: 10px;
+    }
+    &__button {
+      background-color: yellowgreen;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      &.minus {
+        background-color: red;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #G1:hover {
+    cursor: pointer;
+  }
+}
