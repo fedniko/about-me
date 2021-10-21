@@ -41,6 +41,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    &__item {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
     img {
       &:hover {
         opacity: 0.5;

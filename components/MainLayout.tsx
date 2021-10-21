@@ -77,17 +77,32 @@ export default function MainLayout({children, title}: any) {
               </Row>
             </Col>
             <Col xl="4" lg="4" md="4" sm="12" xs="12" className="footer__icons">
-              <Link href="http://instagram.com/fedniko">
-                <a>
-                  <Image
-                    className="header__logo_img"
-                    src="/img/instagram.svg"
-                    width="20"
-                    height="20"
-                    alt="instagram"
-                  />
-                </a>
-              </Link>
+              <div className="footer__icons__item">
+                <Link href="https://instagram.com/fedniko">
+                  <a>
+                    <Image
+                      className="header__logo_img"
+                      src="/img/instagram.svg"
+                      width="20"
+                      height="20"
+                      alt="instagram"
+                    />
+                  </a>
+                </Link>
+              </div>
+              <div className="footer__icons__item">
+                <Link href="https://github.com/fedniko">
+                  <a>
+                    <Image
+                      className="header__logo_img"
+                      src="/img/github.svg"
+                      width="20"
+                      height="20"
+                      alt="github"
+                    />
+                  </a>
+                </Link>
+              </div>
             </Col>
           </Row>
         </Container>
