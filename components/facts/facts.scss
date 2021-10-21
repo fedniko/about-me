@@ -1,0 +1,40 @@
+.facts {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  &__eye {
+    background-image: url("/img/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: white;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 40px;
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    -moz-animation: 4s linear 0s infinite alternate move_eye;
+    -o-animation: 4s linear 0s infinite alternate move_eye;
+    animation: 4s linear 0s infinite alternate move_eye;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @-webkit-keyframes move_eye { from { margin-left:-10%; } to { margin-left:90%; }  }
+  @-moz-keyframes move_eye { from { margin-left:-10%; } to { margin-left:90%; }  }
+  @-o-keyframes move_eye { from { margin-left:-10%; } to { margin-left:90%; }  }
+  @keyframes move_eye { from { margin-left:-10%; } to { margin-left:90%; }  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+  }
+}

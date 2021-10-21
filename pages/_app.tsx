@@ -1,6 +1,7 @@
 import '../styles/globals.scss';
 import '../components/header.scss';
 import '../components/footer.scss';
+import '../components/facts/facts.scss';
 import '../components/skills/skills.scss';
 import type { AppProps } from 'next/app';
 import wrapper from '../store/store';

@@ -80,12 +80,6 @@
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
 /* Убираем внешние отступы */
 body,
 h1,
@@ -116,6 +110,12 @@ body {
 ul[class],
 ol[class] {
   list-style: none;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
@@ -170,6 +170,7 @@ html, body, #__next {
 
 main {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, #39b783 0%,#5fc4ed 100%);
 }
 
 a {
@@ -182,6 +183,7 @@ a {
   font-weight: 300;
   font-size: 16px;
   line-height: 120%;
+  color: #2c3b4e;
 }
 
 .heading {
@@ -189,4 +191,5 @@ a {
   font-weight: 500;
   font-size: 32px;
   line-height: 130%;
+  color: #2c3b4e;
 }
