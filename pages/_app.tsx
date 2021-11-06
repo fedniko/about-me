@@ -4,6 +4,7 @@ import '../components/footer.scss';
 import '../components/facts/facts.scss';
 import '../components/pendulum/pendulum.scss';
 import '../components/skills/skills.scss';
+import '../components/GTO/GTO.scss';
 import type { AppProps } from 'next/app';
 import wrapper from '../store/store';
 
