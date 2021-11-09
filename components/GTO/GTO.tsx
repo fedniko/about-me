@@ -108,8 +108,18 @@ export default function GTO() {
         <Row>
           <Col>
             <h2 className="heading d-flex justify-content-center mb-4">
-              Сдача ГТО / V ступень
+              Сдача ГТО
             </h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs="3">
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasic">
+                <Form.Label>Введите ваш возраст</Form.Label>
+                <Form.Control type="number" placeholder="Полных лет"/>
+              </Form.Group>
+            </Form>
           </Col>
         </Row>
         <Row className="align-items-start">
@@ -117,7 +127,7 @@ export default function GTO() {
             <Form>
               {
                 results.map((result: any, index: number) => (
-                  <Form.Group className="mb-3" controlId="formBasic" key={result.id}>
+                  <Form.Group className="mb-3" controlId={`formBasic${result.id}`} key={result.id}>
                     <Form.Label>{result.name}</Form.Label>
                     <Form.Control type="number" placeholder="Введите ваш результат"
                                   onChange={(e) => handleChange(e, index)}/>
