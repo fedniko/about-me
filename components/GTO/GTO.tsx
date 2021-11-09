@@ -53,7 +53,7 @@ export default function GTO() {
     } else if (items[0] <= 4.9) {
       results[0].value = 'Бронза'
       setResults(() => ([...results]))
-    } else {
+    } else if (items[0]) {
       results[0].value = 'Плохо'
       setResults(() => ([...results]))
     }
@@ -67,7 +67,7 @@ export default function GTO() {
     } else if (items[1] <= 15) {
       results[1].value = 'Бронза'
       setResults(() => ([...results]))
-    } else {
+    } else if (items[1]) {
       results[1].value = 'Плохо'
       setResults(() => ([...results]))
     }
@@ -81,7 +81,7 @@ export default function GTO() {
     } else if (items[2] >= 9) {
       results[2].value = 'Бронза'
       setResults(() => ([...results]))
-    } else {
+    } else if (items[2]) {
       results[2].value = 'Плохо'
       setResults(() => ([...results]))
     }
@@ -95,7 +95,7 @@ export default function GTO() {
     } else if (items[3] >= 6) {
       results[3].value = 'Бронза'
       setResults(() => ([...results]))
-    } else {
+    } else if (items[3]) {
       results[3].value = 'Плохо'
       setResults(() => ([...results]))
     }
@@ -111,7 +111,7 @@ export default function GTO() {
                 results.map((result: any, index: number) => (
                   <Form.Group className="mb-3" controlId="formBasic" key={result.id}>
                     <Form.Label>{result.name}</Form.Label>
-                    <Form.Control type="text" placeholder="Введите ваш результат"
+                    <Form.Control type="number" placeholder="Введите ваш результат"
                                   onChange={(e) => handleChange(e, index)}/>
                     {
                       result.value && (
