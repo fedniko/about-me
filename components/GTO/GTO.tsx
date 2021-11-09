@@ -1,5 +1,6 @@
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
-import {useState} from "react";
+import React, {useState} from "react";
+import Image from "next/image";
 
 export default function GTO() {
   const [items, setItems] = useState<any>([])
@@ -106,6 +107,13 @@ export default function GTO() {
       <Container>
         <Row>
           <Col>
+            <h2 className="heading d-flex justify-content-center mb-4">
+              Сдача ГТО / V ступень
+            </h2>
+          </Col>
+        </Row>
+        <Row className="align-items-start">
+          <Col>
             <Form>
               {
                 results.map((result: any, index: number) => (
@@ -113,13 +121,6 @@ export default function GTO() {
                     <Form.Label>{result.name}</Form.Label>
                     <Form.Control type="number" placeholder="Введите ваш результат"
                                   onChange={(e) => handleChange(e, index)}/>
-                    {
-                      result.value && (
-                        <Form.Text className="text-muted">
-                          {result.value}
-                        </Form.Text>
-                      )
-                    }
                   </Form.Group>
                 ))
               }
@@ -127,6 +128,87 @@ export default function GTO() {
                 Проверить
               </Button>
             </Form>
+          </Col>
+          <Col className="GTO__results">
+            {
+              results.map((result: any) => (
+                <div className="GTO__results__item" key={result.id}>
+                  {
+                    result.value === 'Золото' ? (
+                      <>
+                        <div className="GTO__results__item__picture">
+                          <Image
+                            src="/img/gold-medal.svg"
+                            width="70"
+                            height="70"
+                            alt="medal"
+                          />
+                        </div>
+                        <p className="GTO__results__item__text">
+                          Отлично!
+                        </p>
+                      </>
+                    ) : result.value === 'Серебро' ? (
+                      <>
+                        <div className="GTO__results__item__picture">
+                          <Image
+                            src="/img/silver-medal.svg"
+                            width="70"
+                            height="70"
+                            alt="medal"
+                          />
+                        </div>
+                        <p className="GTO__results__item__text">
+                          Хорошо!
+                        </p>
+                      </>
+                    ) : result.value === 'Бронза' ? (
+                      <>
+                        <div className="GTO__results__item__picture">
+                          <Image
+                            src="/img/bronze-medal.svg"
+                            width="70"
+                            height="70"
+                            alt="medal"
+                          />
+                        </div>
+                        <p className="GTO__results__item__text">
+                          Неплохо!
+                        </p>
+                      </>
+                    ) : result.value === 'Плохо' ? (
+                      <>
+                        <div className="GTO__results__item__picture">
+                          <Image
+                            src="/img/exercise.svg"
+                            width="70"
+                            height="70"
+                            alt="medal"
+                          />
+                        </div>
+                        <p className="GTO__results__item__text">
+                          Потренируйтесь и попробуйте еще
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <div className="GTO__results__item__picture">
+                          <Image
+                            src="/img/arrow-left.svg"
+                            width="70"
+                            height="70"
+                            alt="medal"
+                          />
+                        </div>
+                        <p className="GTO__results__item__text">
+                          Введите ваши результаты для итогов
+                        </p>
+                      </>
+                    )
+                  }
+                </div>
+              ))
+            }
           </Col>
         </Row>
       </Container>

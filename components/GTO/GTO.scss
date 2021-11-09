@@ -5,4 +5,25 @@
     -webkit-appearance: none;
     margin: 0;
   }
+  &__results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      &__picture {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+      }
+      &__text {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
 }

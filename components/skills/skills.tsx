@@ -40,7 +40,7 @@ export default function Skills() {
       <Container>
         <Row>
           <Col>
-            <h2 className="heading d-flex justify-content-center">
+            <h2 className="heading d-flex justify-content-center mb-4">
               My Skills
             </h2>
           </Col>
