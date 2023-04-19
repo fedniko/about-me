@@ -3,6 +3,7 @@ const path = require('path');
 
 const nextConfig = {
   sassOptions: {
+    fiber: false,
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
