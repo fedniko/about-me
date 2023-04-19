@@ -168,9 +168,25 @@ html, body, #__next {
   flex-direction: column;
 }
 
+:root {
+  /* Your default theme */
+
+}
+
 main {
   flex: 1 0 auto;
-  background: linear-gradient(to bottom, #39b783 0%,#5fc4ed 100%);
+}
+
+[data-theme='light'] {
+  main {
+    background: white;
+  }
+}
+
+[data-theme='dark'] {
+  main {
+    background: black;
+  }
 }
 
 a {

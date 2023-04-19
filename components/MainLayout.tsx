@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import Switch from '@/components/switch/switch';
 import { scrollIntoSkills } from './skills/skills';
 import { scrollIntoFacts } from './facts/facts';
 
@@ -27,6 +28,7 @@ export default function MainLayout({ children, title }: any) {
                 />
               </Link>
               <p className="text">Nikolay Fedorov</p>
+              <Switch />
             </Col>
           </Row>
         </Container>

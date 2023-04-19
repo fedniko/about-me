@@ -210,6 +210,7 @@ export default function GTO() {
                         width="70"
                         height="70"
                         alt="medal"
+                        priority
                       />
                     </div>
                     <p className="GTO__results__item__text">

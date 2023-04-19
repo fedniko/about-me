@@ -55,8 +55,11 @@ export default function Skills() {
                       quality={75}
                       src={item.image_url}
                       alt="skills preview"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      priority
+                      style={{
+                        objectFit: 'contain',
+                      }}
                     />
                   )}
                 </div>

@@ -1,5 +1,5 @@
 import { Context, createWrapper, MakeStore } from 'next-redux-wrapper';
-import { createStore } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 import { reducer } from './reducers';
 import { IRootState } from './types';
