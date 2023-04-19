@@ -4,7 +4,8 @@ import { devToolsEnhancer } from 'redux-devtools-extension';
 import { reducer } from './reducers';
 import { IRootState } from './types';
 
-const devTools: any = process.env.NODE_ENV !== 'production' && devToolsEnhancer({});
+const devTools: any =
+  process.env.NODE_ENV !== 'production' && devToolsEnhancer({});
 
 const makeStore: MakeStore<IRootState | any> = (context: Context) =>
   createStore(reducer, devTools);

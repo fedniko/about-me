@@ -1,8 +1,14 @@
-const path = require('path');
 /** @type {import('next').NextConfig} */
-module.exports = {
+const path = require('path');
+
+const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  reactStrictMode: true,
-}
+  images: {
+    domains: [`${process.env.NEXT_HOSTNAME}`, 'mc.yandex.ru', 'localhost'],
+  },
+  reactStrictMode: false,
+};
+
+module.exports = nextConfig;

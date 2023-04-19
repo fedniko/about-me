@@ -1,11 +1,11 @@
-import {Col, Container, Row} from "react-bootstrap";
-import Image from "next/image";
-import React, { useState } from "react";
+import { Col, Container, Row } from 'react-bootstrap';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 const skillsRef: any = React.createRef();
 
 export function scrollIntoSkills() {
-  skillsRef.current.scrollIntoView({ behavior: 'smooth'})
+  skillsRef.current.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function Skills() {
@@ -46,41 +46,33 @@ export default function Skills() {
           </Col>
         </Row>
         <Row>
-          {
-            posts.map((item: any) => (
-              <Col
-                sm="6"
-                md="6"
-                lg="3"
-                className="skills__item"
-                key={item.id}
-              >
-                <div className="skills__item__body">
-                  <div className="skills__item__body__picture">
-                    {item.image_url && (
-                      <Image
-                        quality={75}
-                        src={item.image_url}
-                        alt="skills preview"
-                        layout="fill"
-                        objectFit="contain"
-                      />
-                    )}
-                  </div>
-                  <div className="skills__item__body__info">
-                    <h3 className="skills__item__body__info__title">
-                      {item.title}
-                    </h3>
-                    <p className="text skills__item__body__info__description">
-                      {item.description}
-                    </p>
-                  </div>
+          {posts.map((item: any) => (
+            <Col sm="6" md="6" lg="3" className="skills__item" key={item.id}>
+              <div className="skills__item__body">
+                <div className="skills__item__body__picture">
+                  {item.image_url && (
+                    <Image
+                      quality={75}
+                      src={item.image_url}
+                      alt="skills preview"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  )}
                 </div>
-              </Col>
-            ))
-          }
+                <div className="skills__item__body__info">
+                  <h3 className="skills__item__body__info__title">
+                    {item.title}
+                  </h3>
+                  <p className="text skills__item__body__info__description">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>
-  )
+  );
 }

@@ -1,11 +1,10 @@
-import {Col, Container, Row} from "react-bootstrap";
-import {createRef, useState} from "react";
-import React, {useRef} from 'react'
+import { Col, Container, Row } from 'react-bootstrap';
+import React, { createRef, useState, useRef } from 'react';
 
 const factsRef: any = createRef();
 
 export function scrollIntoFacts() {
-  factsRef.current.scrollIntoView({ behavior: 'smooth'})
+  factsRef.current.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function Facts() {
@@ -57,23 +56,23 @@ export default function Facts() {
       <Container>
         <Row>
           <Col>
-            <div className="facts__eye" ref={newElement} onClick={() => yodaClick()}/>
+            <div
+              className="facts__eye"
+              ref={newElement}
+              onClick={() => yodaClick()}
+            />
           </Col>
         </Row>
         <Row>
           <Col>
             <ul className="text facts__info">
-              {
-                facts.map((fact: any) => (
-                  <li key={fact.id}>
-                    {fact.text}
-                  </li>
-                ))
-              }
+              {facts.map((fact: any) => (
+                <li key={fact.id}>{fact.text}</li>
+              ))}
             </ul>
           </Col>
         </Row>
       </Container>
     </section>
-  )
+  );
 }

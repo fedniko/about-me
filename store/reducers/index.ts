@@ -2,7 +2,7 @@ import { AnyAction, combineReducers } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
 import { IRootState } from '../types';
 import modalsReducer from './modalsReducer';
-import authReducer from "./authReducer";
+import authReducer from './authReducer';
 
 const rootReducer = combineReducers({
   modals: modalsReducer,
