@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <MainLayout title="Главная">
       <Facts />
-      <Pendulum />
+      {/* <Pendulum /> */}
       <AboutMe />
-      <GTO />
+      {/* <GTO /> */}
     </MainLayout>
   );
 }

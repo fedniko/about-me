@@ -54,15 +54,15 @@ export default function Facts() {
   return (
     <section className="facts" ref={factsRef}>
       <Container>
-        <Row>
-          <Col>
-            <div
-              className="facts__eye"
-              ref={newElement}
-              onClick={() => yodaClick()}
-            />
-          </Col>
-        </Row>
+        {/* <Row> */}
+        {/*  <Col> */}
+        {/*    <div */}
+        {/*      className="facts__eye" */}
+        {/*      ref={newElement} */}
+        {/*      onClick={() => yodaClick()} */}
+        {/*    /> */}
+        {/*  </Col> */}
+        {/* </Row> */}
         <Row>
           <Col>
             <ul className="text facts__info">

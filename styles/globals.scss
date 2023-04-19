@@ -175,17 +175,26 @@ html, body, #__next {
 
 main {
   flex: 1 0 auto;
+  background: linear-gradient(to bottom, #39b783 0%,#5fc4ed 100%);
 }
 
 [data-theme='light'] {
   main {
-    background: white;
+    background: linear-gradient(to bottom, #39b783 0%,#5fc4ed 100%);
+
+    .text {
+      color: #2c3b4e;
+    }
   }
 }
 
 [data-theme='dark'] {
   main {
     background: black;
+
+    .text {
+      color: white;
+    }
   }
 }
 
@@ -199,7 +208,6 @@ a {
   font-weight: 300;
   font-size: 16px;
   line-height: 120%;
-  color: #2c3b4e;
 }
 
 .heading {

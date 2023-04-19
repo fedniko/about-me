@@ -1,5 +1,4 @@
 import { useTheme } from 'next-themes';
-import { useEffect } from 'react';
 import styles from './switch.module.scss';
 
 export default function Switch() {
